@@ -9,6 +9,12 @@ def encoder(password):
     return newPass
 
 
+def decoder(password):
+    """written by Derek Molina"""
+    decoded_password_list = [int(chars) - 3 for chars in encoded]
+    return ''.join(map(str, decoded_password_list))
+
+
 if __name__ == '__main__':
     print("Menu")
     print("-------------")
@@ -36,4 +42,5 @@ if __name__ == '__main__':
         print("3. Quit")
         print()
         selection = int(input("Please enter a menu option: "))
+
 
